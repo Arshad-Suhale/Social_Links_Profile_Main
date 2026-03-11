@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+:root{
+
+    /* Colors */
+    --bg-color: #141414;
+    --bg-card-color: #1F1F1F;
+    --bg-btn-primary: #333333;
+    --bg-btn-primary-hover: #C4F82A;
+    --text-primary: #FFFFFF;
+
+    /* Radius */
+    --radius-none: 0px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-infinity: 9999px;
+
+    /* Heading Text */
+    --heading-xl: 36px;
+    --heading-lg: 32px;
+    --heading-md: 28px;
+    --heading-sm: 24px;
+    --heading-xs: 20px;
+
+    /* Body Text */
+    --body-xl: 18px;
+    --body-lg: 16px;
+    --body-md: 14px;
+    --body-sm: 12px;
+    --body-xs: 11px;
+
+    /* UI Text (Buttons, Labels) */
+    --label-xl: 18px;
+    --label-lg: 16px;
+    --label-md: 14px;
+    --label-sm: 12px;
+    --label-xs: 10px;
+
+    /* Button Height */
+    --button-lg: 48px;
+    --button-md: 40px;
+    --button-sm: 32px;
+    --button-xs: 28px;
+
+    /* Gap */
+    --gap-xxl: 32px;
+    --gap-xl: 20px;
+    --gap-lg: 16px;
+    --gap-md: 14px;
+    --gap-sm: 12px;
+    --gap-xs: 10px;
+    --gap-xxs: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter';
+}
+
+.btn-primary{
+    width: 100%;
+    height: var(--button-lg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: var(--label-lg);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-primary);
+
+    border-radius: var(--radius-md);
+    background-color: var(--bg-btn-primary);
+
+    border: 0.5px solid white;
+    box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5);
+
+    transition: all 300ms ease-in-out;
+}
+.btn-primary:hover{
+    background-color: var(--bg-btn-primary-hover);
+    color: var(--bg-color);
+
+    cursor: pointer;
+}
+.btn-primary:focus{
+    border: 0.5px solid var(--bg-btn-primary-hover);
+    outline: 0.5px solid var(--bg-btn-primary-hover);
+    
+    cursor: pointer;
+}
+
+.container{
+    min-height: 100vh;
+    padding: 28px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card{
+    height: fit-content;
+    width: 100%;
+    max-width: 400px;
+    padding: 28px;
+
+    background-color: var(--bg-card-color);
+    border-radius: var(--radius-xl);
+    border: 2px solid white;
+    box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.5),
+                inset 0 0 15px 3px rgba(255, 255, 255, 0.25);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-xxl);
+}
+
+.info-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-xxl);
+
+    background-color: var(--bg-card-color);
+}
+
+.user-image{
+    width: 120px;
+    height: 120px;
+
+    background-color: white;
+    overflow: hidden;
+    
+    border-radius: var(--radius-infinity);
+    border: 1.5px solid white;
+    box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.5);
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xxs);
+
+    background-color: var(--bg-card-color);
+}
+
+.user-name, .user-place, .user-profession{
+    font-weight: 600;
+    background-color: var(--bg-card-color);
+    text-align: center;
+}
+.user-name{
+    font-size: var(--heading-md);
+}
+.user-place{
+    font-size: var(--body-xl);
+    color: var(--bg-btn-primary-hover);
+}
+.user-profession{
+    font-size: var(--body-lg);
+}
+
+.profile-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.links-container{
+
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-lg);
+
+    background-color: var(--bg-card-color);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 24px;
+    }
+    .container-card{
+        padding: 24px;
+        gap: var(--gap-xxl);
+    }
+    .info-container{
+        gap: var(--gap-xl);
+        
+    }
+    .links-container{
+        gap: var(--gap-lg);
+
+    }
+    .user-image{
+        width: 110px;
+        height: 110px;
+    }
+    .user-name{
+        font-size: var(--heading-md);
+    }
+    .user-place{
+        font-size: var(--body-xl);
+    }
+    .user-profession{
+        font-size: var(--body-lg);
+    }
+    .btn-primary{
+        font-size: var(--label-md);
+        height: var(--button-md);
+    }
+}
+@media screen and (max-width: 375px) {
+    .container{
+        padding: 20px;
+    }
+    .container-card{
+        padding: 20px;
+        gap: var(--gap-xl);
+    }
+    .info-container{
+        gap: var(--gap-lg);
+        
+    }
+    .links-container{
+        gap: var(--gap-md);
+
+    }
+    .user-image{
+        width: 100px;
+        height: 100px;
+    }
+    .user-name{
+        font-size: var(--heading-sm);
+    }
+    .user-place{
+        font-size: var(--body-lg);
+    }
+    .user-profession{
+        font-size: var(--body-md);
+    }
+    .btn-primary{
+        font-size: var(--label-md);
+        height: var(--button-md);
+    }
+}
+@media screen and (max-width: 320px) {
+    .container{
+        padding: 16px;
+    }
+    .container-card{
+        padding: 16px;
+        gap: var(--gap-lg);
+    }
+    .info-container{
+        gap: var(--gap-lg);
+        
+    }
+    .links-container{
+        gap: var(--gap-lg);
+
+    }
+    .user-image{
+        width: 85px;
+        height: 85px;
+    }
+    .user-name{
+        font-size: var(--heading-xs);
+    }
+    .user-place{
+        font-size: var(--body-md);
+    }
+    .user-profession{
+        font-size: var(--body-sm);
+    }
+    .btn-primary{
+        font-size: var(--label-sm);
+        height: var(--button-sm);
+    }
+}
