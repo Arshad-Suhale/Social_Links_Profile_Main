@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Arshad-Suhale/Social_Links_Profile_Main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub URL](https://github.com/Arshad-Suhale/Social_Links_Profile_Main)
+- Live Site URL: [live site URL](https://your-live-site-url.com)
 
 ## My process
 
